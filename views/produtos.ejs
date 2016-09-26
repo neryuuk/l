@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang=pt-br>
 <head><meta charset=utf-8>
-<title>L-oja :: O e-commerce do L :: Produtos
+<title>L-oja, o e-commerce do L :: Produtos
 <%= categoria.length?' :: '+categoria:'';%></title>
 <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
@@ -22,10 +22,10 @@
 </div>
 <% });%>
 <% if (produtos.length == 0) {%>
-<div><p>Não foram encontrados produtos
-<%= categoria.length?' nesta categoria.':'.';%></p></div>
+<div><p>Não foram encontrados produtos na loja
+<%= categoria.length?' para esta categoria.':'.';%></p></div>
 <% } %>
 <div><p>
-<a href="javascript:window.history.back();">&lt; Voltar</a></p>
+<a href="javascript:history.back();">&lt; Voltar</a></p></div>
 </body>
 </html>

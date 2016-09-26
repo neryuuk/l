@@ -2,9 +2,10 @@
 
 * {
   font-family: 'Montserrat', cursive;
-  font-size: 18pt;
+  font-size: 20pt;
   color: #002633;
 }
+
 p, ul, h1, h2, h3, h4, h5, h6  { margin-top: 0; }
 h1 { color: #004d66; }
 a { color: #0099cc; text-decoration: none; }
@@ -16,24 +17,45 @@ h3 { font-size: 22pt; }
 label span {
   padding: 2pt 4pt 8pt 6pt;
 }
-#cad-prod input {
-  border-width: 1pt;
+
+input {
+  border-width: 1px;
   border-style: solid;
   border-color: #004d66;
-  padding: 4pt 8pt;
+  height: 30px;
+  padding: 4px 8px;
 }
-#cad-prod input[type="button"] {
+
+input[type="button"] {
   background-color: #0099cc;
   border-width: 0;
   color: #FFFFFF;
-  padding: 8pt 16pt;
+  height: 48px;
+  padding: 8px 16px;
 }
 
-#cad-prod input[type="button"].disabled {
+input[type="button"].disabled {
   opacity: 0.35;
 }
 
-#obrigatorio { color: red; }
+input.valid {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #0099cc;
+}
+
+input.erro {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ff0000;
+}
+
+em,
+#sucesso {
+  color: #0099cc;
+}
+
+#obrig { color: red; }
 
 .produto {
   margin-bottom: 10pt;
@@ -41,4 +63,43 @@ label span {
 
 .produto p {
   margin: 0;
+}
+/* responsaveis pela mensagem de erro do form */
+.campos .msg_erro {
+  visibility: hidden;
+  margin-left: 20px;
+  width: 160px;
+  height: 30px;
+  padding: 5px 8px;
+  background-color: #ccc;
+  color: #000;
+  text-align: center;
+  z-index: 1;
+  opacity: 0.6;
+  position: relative;
+  display: inline;
+}
+
+.campos,
+.campos label {
+  position: relative;
+  display: inline-block;
+}
+
+/* exibir a mensagem de erro  */
+.campos .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* fade-in da msg de erro */
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; } 
+  to { opacity: 0.6; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } 
+  to { opacity: 0.6; }
 }

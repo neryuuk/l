@@ -14,20 +14,24 @@ module.exports = function(app, db){
   app.route('/cadastrar/produtos')
 // form de cadastro de produtos
     .get(function(req, res){
-      res.render('cadastrar-produtos.ejs', {submit: false});
+      res.render('cadastrar-produtos.ejs', {submit: 'new'});
     })
 
-// dados submetidos para cadastro via form
+// dados submetidos para cadastro via post
     .post(function(req, res){
       var dados = req.body;
-      // convertendo preco para um valor numerico
+      var stat = 'ok'
+      // convertendo preco para um valor numerico com 2 casas
       dados.preco = Number(dados.preco).toFixed(2);
       var novo = new Produto(dados);
       // salvando dados do formulario no banco
       novo.save(function(err, novo){
-        if(err) return console.error(err);
+        if(err){
+          stat = 'err';
+          return console.error(err);
+        }
       });
-      res.render('cadastrar-produtos.ejs', {submit: true});
+      res.render('cadastrar-produtos.ejs', {submit: stat});
     })
 
 // listagem de produtos
