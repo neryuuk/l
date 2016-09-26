@@ -13,6 +13,6 @@ var db = mongoose.connection;
 
 require(__dirname + '/routes/rotas.js')(app, db);
 
-app.listen(80, function(){
-  console.log('Servidor iniciado na porta', 80);
+app.listen(8008, function(){
+  console.log('Servidor iniciado na porta', 8008);
 });
