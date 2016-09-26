@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+<head><meta charset=utf-8>
+<title>L-oja :: O e-commerce do L :: Cadastro de produtos</title>
+<script type="text/javascript">
+function validar(){
+  // 
+};
+</script>
+<link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+<body>
+<h1>L-oja, o e-commerce do L</h1>
+<h2>Cadastro de produtos</h2>
+<div>
+<% if (submit) { %>
+<h3 id="sucesso">Dados cadastrados com sucesso!</h3>
+<% } %>
+<form id="cad-prod" method="POST" action="/cadastrar/produtos">
+  <p>Todos os campos são <em id="obrigatorio">obrigatórios</em></p>
+  <p><label><span>Nome:</span>
+  <input type="text" id="nome" name="nome" onchange="validar()" autofocus></label></p>
+  <p><label><span>Descrição:</span>
+  <input type="text" id="desc" name="desc" onchange="validar()"></label></p>
+  <p><label><span>Preço:</span>
+  <input type="number" id="preco" name="preco" onchange="validar()"></label></p>
+  <p><label><span>Categoria:</span>
+  <input type="text" id="categ" name="categ" onchange="validar()"></label></p>
+  <p><input type="button" id="cadastro" class="disabled" value="Cadastrar" name="cadastrar" onclick="document.getElementById('cad-prod').submit();" disabled></p>
+</form>
+</div>
+</body>
+</html>

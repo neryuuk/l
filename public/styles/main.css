@@ -1,0 +1,44 @@
+@import 'https://fonts.googleapis.com/css?family=Lobster|Montserrat';
+
+* {
+  font-family: 'Montserrat', cursive;
+  font-size: 18pt;
+  color: #002633;
+}
+p, ul, h1, h2, h3, h4, h5, h6  { margin-top: 0; }
+h1 { color: #004d66; }
+a { color: #0099cc; text-decoration: none; }
+
+h1 { font-family: 'Lobster', cursive; font-size: 30pt; }
+h2 { font-size: 26pt; }
+h3 { font-size: 22pt; }
+
+label span {
+  padding: 2pt 4pt 8pt 6pt;
+}
+#cad-prod input {
+  border-width: 1pt;
+  border-style: solid;
+  border-color: #004d66;
+  padding: 4pt 8pt;
+}
+#cad-prod input[type="button"] {
+  background-color: #0099cc;
+  border-width: 0;
+  color: #FFFFFF;
+  padding: 8pt 16pt;
+}
+
+#cad-prod input[type="button"].disabled {
+  opacity: 0.35;
+}
+
+#obrigatorio { color: red; }
+
+.produto {
+  margin-bottom: 10pt;
+}
+
+.produto p {
+  margin: 0;
+}
