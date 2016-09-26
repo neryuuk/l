@@ -18,7 +18,7 @@ function erro(id, msg=''){
     elem.classList.add('valid');
     erro.classList.remove('show');
     erro.innerHTML = '';
-    }
+  }
 };
 
 function vazio(id){

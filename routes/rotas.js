@@ -29,7 +29,7 @@ module.exports = function(app, db){
         if(err){
           stat = 'err';
           return console.error(err);
-        }
+        };
       });
       res.render('cadastrar-produtos.ejs', {submit: stat});
     })

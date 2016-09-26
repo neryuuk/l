@@ -1,1 +1,1 @@
-# E-commerce do L
+# L-oja, o e-commerce do L
